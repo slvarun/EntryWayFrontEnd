@@ -28,7 +28,7 @@ const Register = () => {
     e.preventDefault();
     try {
       console.log(credentials);
-      await axios.post("http://localhost:5000/auth/register", credentials);
+      await axios.post("https://entrywaybackend.onrender.com/auth/register", credentials);
       navigate("/");
     } catch (err) {
       console.log(err);

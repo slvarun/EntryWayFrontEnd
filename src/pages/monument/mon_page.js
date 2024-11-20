@@ -8,7 +8,7 @@ const Mon = () => {
   const id = location.pathname.split("/")[2];
 
   const { data, loading } = useFetch(
-    `http://localhost:5000/monuments/find/${id}`
+    `https://entrywaybackend.onrender.com/monuments/find/${id}`
   );
 
   return (

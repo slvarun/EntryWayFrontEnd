@@ -5,7 +5,7 @@ import A_Mon_Block from "../admin_mon_block/admin_mon_block.js";
 import "./ah.css";
 
 const A_Home = () => {
-  const { data, loading, error } = useFetch(`http://localhost:5000/monuments`);
+  const { data, loading, error } = useFetch(`https://entrywaybackend.onrender.com/monuments`);
 
   return (
     <div>

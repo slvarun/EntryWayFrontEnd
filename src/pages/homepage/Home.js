@@ -6,7 +6,7 @@ import Mon_Block from "../mon_block/mon_home_block";
 import "./home.css";
 
 const Home = () => {
-  const { data, loading, error } = useFetch("http://localhost:5000/monuments");
+  const { data, loading, error } = useFetch("https://entrywaybackend.onrender.com/monuments");
 
   return (
     <div>

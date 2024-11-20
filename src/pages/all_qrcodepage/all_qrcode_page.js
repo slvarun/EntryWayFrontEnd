@@ -8,7 +8,7 @@ import "../homepage/home.css";
 const A_qr_Home = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
-  const { data, loading, error } = useFetch(`http://localhost:5000/admin/Admin/${id}?id=${id}`);
+  const { data, loading, error } = useFetch(`https://entrywaybackend.onrender.com/admin/Admin/${id}?id=${id}`);
 
   return (
     <div>

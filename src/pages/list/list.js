@@ -26,7 +26,7 @@ const List = () => {
 
   // Fetch data based on search criteria
   const { data, loading, error, reFetchData } = useFetch(
-    `http://localhost:5000/monuments?city=${destination}&min=${min}&max=${max}`
+    `https://entrywaybackend.onrender.com/monuments?city=${destination}&min=${min}&max=${max}`
   );
 
   // Trigger search with updated filters

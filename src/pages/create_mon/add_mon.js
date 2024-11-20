@@ -28,7 +28,7 @@ const Add_mon = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/monuments/create_mon`, credentials);
+      await axios.post(`https://entrywaybackend.onrender.com/monuments/create_mon`, credentials);
       navigate(`/`);
     } catch (err) {
       console.error("Error creating monument:", err);
