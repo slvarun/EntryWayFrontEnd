@@ -1,0 +1,133 @@
+/* Monuments Block Container */
+.mon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mon-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Monument Card */
+.mon-card {
+  width: 100%;
+  max-width: 350px;
+  height: 400px; /* Fixed height for uniform cards */
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Image Container */
+.mon-image-container {
+  width: 100%;
+  height: 200px; /* Consistent height for all images */
+  overflow: hidden;
+  position: relative;
+}
+
+.mon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fits within the container while maintaining aspect ratio */
+  transition: transform 0.5s ease, filter 0.3s ease;
+  filter: brightness(90%);
+}
+
+.mon-image-container:hover .mon-image {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+/* Rating Overlay */
+.mon-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Details Section */
+.mon-details {
+  padding: 15px;
+  background-color: #f8f8f8;
+  flex-grow: 1; /* Ensures details section fills the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mon-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.mon-location {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Button Styling */
+.check-button {
+  background-color: #a3a3a3;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 10px;
+}
+
+.check-button:hover {
+  background-color: #6e6e6e;
+  transform: scale(1.02);
+}
+
+.check-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .mon-block {
+    margin: 15px;
+  }
+
+  .mon-card {
+    max-width: 100%;
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  .mon-image-container {
+    height: 200px;
+  }
+
+  .mon-name {
+    font-size: 18px;
+  }
+
+  .check-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

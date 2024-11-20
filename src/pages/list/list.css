@@ -1,0 +1,131 @@
+/* List Container */
+.list-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Wrapper for Search and Results */
+  .list-wrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Search Section */
+  .list-search {
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search Title */
+  .ls-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  /* Search Item Styling */
+  .ls-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .ls-item > label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .ls-item > input,
+  .date-picker {
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  .ls-item > input:focus,
+  .date-picker:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .date-picker {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  /* Search Button */
+  .search-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Results Section */
+  .list-result {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Loading and Error Messages */
+  .loading-message,
+  .error-message {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .list-wrapper {
+      flex-direction: column;
+    }
+  
+    .list-search {
+      position: static;
+      width: 100%;
+    }
+  
+    .list-result {
+      width: 100%;
+    }
+  
+    .ls-item > input,
+    .date-picker {
+      font-size: 12px;
+    }
+  
+    .search-btn {
+      font-size: 12px;
+    }
+  }
+  
